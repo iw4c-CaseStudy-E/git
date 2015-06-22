@@ -1,0 +1,118 @@
+
+//-------------------
+//  #aki
+//-------------------
+#aki{
+  #music{
+    width: 60%;
+    margin: 20px auto 0 auto;
+    padding: 20px 0 20px 0;
+  }
+
+  #download{
+    width: 60%;
+    margin: 20px auto 20px auto;
+    border-bottom: 3px #777 solid;
+    text-align: center;
+  }
+
+  #lyrics{
+    width: 60%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    border-bottom: 3px #777 solid;
+    display: none;
+  }
+
+  #artist{
+    width: 60%;
+    margin: 20px auto 0 auto;
+    padding: 20px 0 20px 0;
+    border-bottom: 3px #777 solid;
+  }
+
+  #artist_details{
+    width: 75%;
+    float: left;
+  }
+
+  #artist_photo{
+    width: 25%;
+    float: left;
+  }
+
+  @media (max-width: 1200px) {
+    #artist_details,#artist_photo{
+      float: none;
+    }
+  }
+
+
+  /*TOPへ戻る*/
+  #page-top{
+    width:50px;
+    height:50px;
+    display:none;
+    position:fixed;
+    right:16px;
+    bottom:16px;
+  }
+
+  #page-top p{
+    margin:0;
+    padding:0;
+    text-align:center;
+    background:#3b3b3b;
+    -webkit-transition:all 0.3s;
+    -moz-transition:all 0.3s;
+    transition:all 0.3s;
+  }
+
+  #page-top p:hover{
+    background:#8b8b8b;
+  }
+
+  #move-page-top{
+    color:#fff;
+    line-height:50px;
+    text-decoration:none;
+    display:block;
+    cursor:pointer;
+  }
+
+  /*ダウンロードボタン*/
+  a:hover img{
+      cursor:pointer;
+      filter: alpha(opacity=60);        /* IE*/
+      -ms-filter: "alpha(opacity=60)";  /* IE*/
+      -moz-opacity:0.6;                 /* FF*/
+      -khtml-opacity: 0.6;              /* Safari*/
+      opacity:0.6;
+      zoom:1;
+  }
+
+  a:active img{
+      cursor:pointer;
+      filter: alpha(opacity=100);        /* IE*/
+      -ms-filter: "alpha(opacity=100)";  /* IE*/
+      -moz-opacity:1.0;                 /* FF*/
+      -khtml-opacity: 1.0;              /* Safari*/
+      opacity:1.0;
+      zoom:1;
+  }
+
+
+  #btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 15px 0 15px 0;
+    letter-spacing: 12px;
+    font-weight: 700;
+    background: #fcad26;
+    color: #fff;
+    width:150px;
+    height: 50px;
+    text-align: left;
+  }
+}// #aki

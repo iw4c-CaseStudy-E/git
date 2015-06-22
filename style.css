@@ -1,0 +1,835 @@
+@charset "UTF-8";
+/* line 1, css/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, header.headerTop, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 23, css/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, header.headerTop, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 28, css/_reset.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 32, css/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 36, css/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 42, css/_reset.scss */
+input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 47, css/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 51, css/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 56, css/_reset.scss */
+caption, th {
+  text-align: left;
+}
+
+/* line 60, css/_reset.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 64, css/_reset.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+/* line 72, css/_reset.scss */
+.clearfix {
+  min-height: 1px;
+}
+
+/* line 76, css/_reset.scss */
+* html .clearfix {
+  height: 1px;
+  /*¥*/
+     /*/
+height: auto;
+overflow: hidden;
+/**/
+}
+
+/* line 84, css/_reset.scss */
+.both {
+  clear: both;
+}
+
+/*テキストシャドウ {
+    text-shadow: 1px 1px 3px #000;
+}
+*/
+/*ボックスシャドウ {
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+*/
+/*ボックスシャドウ内側 {
+    -moz-box-shadow: inset 1px 1px 3px #000;
+    -webkit-box-shadow: inset 1px 1px 3px #000;
+    box-shadow: inset 1px 1px 3px #000;
+}
+*/
+/*角丸 {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+*/
+/*トランジション {
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+    transition: 1.5s;
+}
+*/
+/*透明 {
+    filter: alpha(opacity=25);
+    -moz-opacity:0.25;
+    opacity:0.25;
+}
+*/
+/*背景のみ透明 {
+    background-color:rgba(255,255,255,0.2);
+}
+*/
+/*グラデーション {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000')";
+    background-image: -moz-linear-gradient(top, #ffffff, #000000);
+    background-image: -ms-linear-gradient(top, #ffffff, #000000);
+    background-image: -o-linear-gradient(top, #ffffff, #000000);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#000000));
+    background-image: -webkit-linear-gradient(top, #ffffff, #000000);
+    background-image: linear-gradient(top, #ffffff, #000000);
+}
+*/
+/*スマホ対応
+@media screen and (max-width: 480px){
+
+}
+@media screen and (max-width: 320px){
+
+}
+*/
+/* line 1, css/_common.scss */
+body {
+  margin: 0;
+  color: #FFF;
+  font-family: "メイリオ","Hiragino Kaku Gothic Pro", sans-selif;
+}
+
+/* line 6, css/_common.scss */
+.bodyColor {
+  ﻿background: #000000;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, black 0%, #510f31 27%, #7f2048 55%, #a3394c 62%, #ff9400 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(27%, #510f31), color-stop(55%, #7f2048), color-stop(62%, #a3394c), color-stop(100%, #ff9400));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, black 0%, #510f31 27%, #7f2048 55%, #a3394c 62%, #ff9400 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, black 0%, #510f31 27%, #7f2048 55%, #a3394c 62%, #ff9400 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, black 0%, #510f31 27%, #7f2048 55%, #a3394c 62%, #ff9400 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, black 0%, #510f31 27%, #7f2048 55%, #a3394c 62%, #ff9400 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ff9400',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 16, css/_common.scss */
+header, header.headerTop {
+  margin-bottom: 40px;
+  color: #FFF;
+}
+/* line 21, css/_common.scss */
+header a, header.headerTop a {
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 25, css/_common.scss */
+header .siteinfo {
+  overflow: hidden;
+  padding: 14px 0;
+}
+/* line 29, css/_common.scss */
+header .siteinfo h1 {
+  float: left;
+  margin: 0;
+  font-size: 20px;
+}
+/* line 34, css/_common.scss */
+header .siteinfo p {
+  float: right;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* line 42, css/_common.scss */
+header.headerTop {
+  position: absolute;
+  z-index: 1;
+}
+
+/* line 47, css/_common.scss */
+footer {
+  margin-top: 40px;
+  padding: 14px 0;
+  color: #FFF;
+}
+
+/* line 55, css/_common.scss */
+.sideNav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 61, css/_common.scss */
+.sideNav .widget {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 66, css/_common.scss */
+.sideNav .widgettitle {
+  display: none;
+}
+/* line 70, css/_common.scss */
+.sideNav li a {
+  display: block;
+  padding: 10px 5px;
+  color: #FFF;
+  font-size: 14px;
+  text-decoration: none;
+}
+/* line 76, css/_common.scss */
+.sideNav li a:hover {
+  text-decoration: underline;
+  color: #666;
+  background-color: #DDD;
+}
+
+/* line 85, css/_common.scss */
+.container {
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* line 4, css/_index.scss */
+#top {
+  width: 100%;
+  position: relative;
+}
+/* line 8, css/_index.scss */
+#top .video {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #DDD;
+}
+/* line 12, css/_index.scss */
+#top .video img {
+  width: 100%;
+  vertical-align: bottom;
+}
+/* line 16, css/_index.scss */
+#top .video video {
+  width: 100%;
+  vertical-align: bottom;
+}
+/* line 22, css/_index.scss */
+#top .event {
+  width: 590px;
+  padding: 5px;
+  margin-right: 20px;
+  float: left;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 31, css/_index.scss */
+#top .event section {
+  margin-bottom: 30px;
+}
+/* line 34, css/_index.scss */
+#top .event .subTitle {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #40E0D0;
+}
+/* line 40, css/_index.scss */
+#top .event .miniTitle {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+  border-left: 2px solid #40E0D0;
+  border-bottom: 1px dotted #DDD;
+}
+/* line 47, css/_index.scss */
+#top .event table {
+  width: 580px;
+  border: 1px solid #666;
+  border-collapse: collapse;
+}
+/* line 53, css/_index.scss */
+#top .event table th {
+  width: 200px;
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+/* line 61, css/_index.scss */
+#top .event table td {
+  padding: 5px;
+  border-bottom: 1px solid #666;
+  vertical-align: middle;
+}
+/* line 68, css/_index.scss */
+#top .navmenu {
+  width: 360px;
+  float: left;
+}
+/* line 72, css/_index.scss */
+#top .airplane {
+  position: absolute;
+  top: 70%;
+  left: 0px;
+  z-index: -1;
+}
+
+/* line 5, css/_aki.scss */
+#aki {
+  /*TOPへ戻る*/
+  /*ダウンロードボタン*/
+}
+/* line 6, css/_aki.scss */
+#aki #music {
+  width: 60%;
+  margin: 20px auto 0 auto;
+  padding: 20px 0 20px 0;
+}
+/* line 12, css/_aki.scss */
+#aki #download {
+  width: 60%;
+  margin: 20px auto 20px auto;
+  border-bottom: 3px #777 solid;
+  text-align: center;
+}
+/* line 19, css/_aki.scss */
+#aki #lyrics {
+  width: 60%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  border-bottom: 3px #777 solid;
+  display: none;
+}
+/* line 27, css/_aki.scss */
+#aki #artist {
+  width: 60%;
+  margin: 20px auto 0 auto;
+  padding: 20px 0 20px 0;
+  border-bottom: 3px #777 solid;
+}
+/* line 34, css/_aki.scss */
+#aki #artist_details {
+  width: 75%;
+  float: left;
+}
+/* line 39, css/_aki.scss */
+#aki #artist_photo {
+  width: 25%;
+  float: left;
+}
+@media (max-width: 1200px) {
+  /* line 45, css/_aki.scss */
+  #aki #artist_details, #aki #artist_photo {
+    float: none;
+  }
+}
+/* line 52, css/_aki.scss */
+#aki #page-top {
+  width: 50px;
+  height: 50px;
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
+/* line 61, css/_aki.scss */
+#aki #page-top p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #3b3b3b;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 71, css/_aki.scss */
+#aki #page-top p:hover {
+  background: #8b8b8b;
+}
+/* line 75, css/_aki.scss */
+#aki #move-page-top {
+  color: #fff;
+  line-height: 50px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+/* line 84, css/_aki.scss */
+#aki a:hover img {
+  cursor: pointer;
+  filter: alpha(opacity=60);
+  /* IE*/
+  -ms-filter: "alpha(opacity=60)";
+  /* IE*/
+  -moz-opacity: 0.6;
+  /* FF*/
+  -khtml-opacity: 0.6;
+  /* Safari*/
+  opacity: 0.6;
+  zoom: 1;
+}
+/* line 94, css/_aki.scss */
+#aki a:active img {
+  cursor: pointer;
+  filter: alpha(opacity=100);
+  /* IE*/
+  -ms-filter: "alpha(opacity=100)";
+  /* IE*/
+  -moz-opacity: 1.0;
+  /* FF*/
+  -khtml-opacity: 1.0;
+  /* Safari*/
+  opacity: 1.0;
+  zoom: 1;
+}
+/* line 105, css/_aki.scss */
+#aki #btn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 15px 0 15px 0;
+  letter-spacing: 12px;
+  font-weight: 700;
+  background: #fcad26;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  text-align: left;
+}
+
+/*
+神谷君
+*/
+/* line 4, css/_audition.scss */
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+/* line 13, css/_audition.scss */
+.flex-video.widescreen {
+  padding-bottom: 57.25%;
+}
+
+/* line 14, css/_audition.scss */
+.flex-video.vimeo {
+  padding-top: 0;
+}
+
+/* line 16, css/_audition.scss */
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  /* line 26, css/_audition.scss */
+  .flex-video {
+    padding-top: 0;
+  }
+}
+/* line 35, css/_audition.scss */
+#aud .aud_in {
+  background: #fff;
+}
+/* line 39, css/_audition.scss */
+#aud .aud_box {
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+/* line 45, css/_audition.scss */
+#aud .aud_box:after {
+  padding-top: 100%;
+  display: block;
+  content: "";
+}
+/* line 51, css/_audition.scss */
+#aud .aud_box > .aud_in {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+/* line 59, css/_audition.scss */
+#aud .and_in a {
+  width: 100%;
+}
+/* line 63, css/_audition.scss */
+#aud .aud_in a img {
+  width: 100%;
+}
+/* line 68, css/_audition.scss */
+#aud .aud_in a:hover img:not(.ico) {
+  opacity: 0.5;
+}
+/* line 72, css/_audition.scss */
+#aud .aud_in p {
+  background: rgba(255, 255, 255, 0.5);
+  border-left: 6px solid rgba(0, 0, 0, 0.2);
+  width: 80%;
+  color: #000;
+  padding: 5px;
+  margin-left: 5%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  font-size: 14px;
+}
+/* line 86, css/_audition.scss */
+#aud .aud_in p img {
+  padding: 5px 5px 0 0;
+  width: 20px;
+}
+
+/* line 1, css/_history.scss */
+#history {
+  /*@import url('reset.css');*/
+  /* Footer Style */
+  /* Vertical Accordion Style */
+}
+/* line 3, css/_history.scss */
+#history a {
+  color: #000;
+  text-decoration: none;
+}
+/* line 7, css/_history.scss */
+#history .clr {
+  clear: both;
+}
+/* line 10, css/_history.scss */
+#history .container {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  margin: 40px auto;
+}
+/* line 16, css/_history.scss */
+#history .content {
+  width: 1000px;
+  margin: 0 auto;
+}
+/* line 20, css/_history.scss */
+#history h1 {
+  margin: 10px 0 0px 20px;
+  font-size: 34px;
+  color: #000;
+  text-shadow: 1px 1px 1px #fef7a9;
+  text-transform: uppercase;
+}
+/* line 27, css/_history.scss */
+#history h1 span {
+  font-size: 18px;
+  text-transform: none;
+}
+/* line 31, css/_history.scss */
+#history .more ul {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 50px 0px 30px 0px;
+  height: 30px;
+  clear: both;
+  width: 1000px;
+  margin: 10px auto 0 auto;
+  color: #000;
+}
+/* line 41, css/_history.scss */
+#history .more ul li {
+  float: left;
+  margin: 0px 2px;
+}
+/* line 45, css/_history.scss */
+#history .more ul li.selected a,
+#history .more ul li.selected a:hover {
+  background: #000;
+  color: #fff;
+  text-shadow: none;
+}
+/* line 51, css/_history.scss */
+#history .more ul li a {
+  text-shadow: 1px 1px 1px #fff;
+  color: #555;
+  background: #f7f7f7;
+  padding: 3px 6px;
+  -moz-box-shadow: 1px 1px 2px #aaa;
+  -webkit-box-shadow: 1px 1px 2px #aaa;
+  box-shadow: 1px 1px 2px #aaa;
+}
+/* line 60, css/_history.scss */
+#history .more ul li a:hover {
+  background: #000;
+  color: #fff;
+  text-shadow: none;
+}
+/* line 65, css/_history.scss */
+#history .content {
+  width: 100%;
+  position: relative;
+}
+/* line 70, css/_history.scss */
+#history .header {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  line-height: 24px;
+  top: 0;
+  font-size: 13px;
+  background: #000;
+  opacity: 0.9;
+  text-transform: uppercase;
+  z-index: 4;
+}
+/* line 82, css/_history.scss */
+#history .header a {
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+  color: #ddd;
+  text-align: right;
+}
+/* line 89, css/_history.scss */
+#history .header a:hover {
+  color: #fff;
+}
+/* line 92, css/_history.scss */
+#history .header a span {
+  font-weight: bold;
+}
+/* line 95, css/_history.scss */
+#history .header span.right_ab {
+  position: absolute;
+  right: 4px;
+}
+/* line 102, css/_history.scss */
+#history .va-container {
+  position: relative;
+  margin: 40px auto 0 auto;
+}
+/* line 106, css/_history.scss */
+#history .va-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+/* line 113, css/_history.scss */
+#history .va-slice {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  overflow: hidden;
+}
+/* line 120, css/_history.scss */
+#history .va-slice-1 {
+  background: black url(./images/history/s_1.png) no-repeat center center;
+}
+/* line 123, css/_history.scss */
+#history .va-slice-2 {
+  background: black url(./images/history/s_8.png) no-repeat center center;
+}
+/* line 126, css/_history.scss */
+#history .va-slice-3 {
+  background: black url(./images/history/s_2.png) no-repeat center center;
+}
+/* line 129, css/_history.scss */
+#history .va-slice-4 {
+  background: black url(./images/history/s_6.png) no-repeat center center;
+}
+/* line 132, css/_history.scss */
+#history .va-slice-5 {
+  background: black url(./images/history/s_11.png) no-repeat center center;
+}
+/* line 135, css/_history.scss */
+#history .va-slice-6 {
+  background: black url(./images/history/s_6.png) no-repeat center center;
+}
+/* line 138, css/_history.scss */
+#history .va-slice-7 {
+  background: black url(./images/history/s_7.png) no-repeat center center;
+}
+/* line 141, css/_history.scss */
+#history .va-slice-color-1 {
+  background-color: #97c5eb;
+}
+/* line 144, css/_history.scss */
+#history .va-slice-color-2 {
+  background-color: #68ace5;
+}
+/* line 147, css/_history.scss */
+#history .va-slice-color-3 {
+  background-color: #0072cf;
+}
+/* line 150, css/_history.scss */
+#history .va-slice-color-4 {
+  background-color: #0039a6;
+}
+/* line 153, css/_history.scss */
+#history .va-slice-color-5 {
+  background-color: #00338e;
+}
+/* line 156, css/_history.scss */
+#history .va-slice-color-6 {
+  background-color: #002c76;
+}
+/* line 159, css/_history.scss */
+#history .va-slice-color-7 {
+  background-color: #002144;
+}
+/* line 162, css/_history.scss */
+#history .va-title {
+  /*  font-family: 'Open Sans Condensed', sans-serif;*/
+  /*  text-transform:uppercase;*/
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 20px;
+  color: #fff;
+  /*  text-shadow: 0px 0px 1px white;*/
+}
+/* line 171, css/_history.scss */
+#history .va-content {
+  display: none;
+  margin-left: 25px;
+}
+/* line 175, css/_history.scss */
+#history .va-slice p {
+  font-size: 22px;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+/* line 180, css/_history.scss */
+#history .va-slice ul {
+  margin-top: 20px;
+}
+/* line 183, css/_history.scss */
+#history .va-slice ul li {
+  float: left;
+  margin: 0px 2px;
+}
+/* line 187, css/_history.scss */
+#history .va-slice ul li a {
+  color: #000;
+  background: #eede2f;
+  padding: 3px 6px;
+  font-size: 14px;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+}
+/* line 195, css/_history.scss */
+#history .va-slice ul li a:hover {
+  background: #000;
+  color: #fff;
+  text-shadow: none;
+}
+/* line 200, css/_history.scss */
+#history .va-nav span {
+  width: 40px;
+  height: 25px;
+  /*  background:transparent url(../images/prev.png) no-repeat center center;*/
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  margin-left: -20px;
+  text-indent: -9000px;
+  opacity: 0.7;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+}
+/* line 214, css/_history.scss */
+#history .va-nav span.va-nav-next {
+  /*  background-image:url(../images/next.png);*/
+  top: auto;
+  bottom: -35px;
+}
+/* line 219, css/_history.scss */
+#history .va-nav span:hover {
+  opacity: 1.0;
+}

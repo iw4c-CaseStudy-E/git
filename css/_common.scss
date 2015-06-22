@@ -1,0 +1,89 @@
+body{
+  margin: 0;
+  color: #FFF;
+  font-family: "メイリオ","Hiragino Kaku Gothic Pro", sans-selif;
+}
+.bodyColor{
+  ﻿background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(top, #000000 0%, #510f31 27%, #7f2048 55%, #a3394c 62%, #ff9400 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(27%,#510f31), color-stop(55%,#7f2048), color-stop(62%,#a3394c), color-stop(100%,#ff9400)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #000000 0%,#510f31 27%,#7f2048 55%,#a3394c 62%,#ff9400 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #000000 0%,#510f31 27%,#7f2048 55%,#a3394c 62%,#ff9400 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #000000 0%,#510f31 27%,#7f2048 55%,#a3394c 62%,#ff9400 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #000000 0%,#510f31 27%,#7f2048 55%,#a3394c 62%,#ff9400 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ff9400',GradientType=0 ); /* IE6-9 */
+}
+header{
+  margin-bottom: 40px;
+  color: #FFF;
+  // background-color: $mainColor;
+
+  a{
+    color: #FFF;
+    text-decoration: none;
+  }
+  .siteinfo{
+    overflow: hidden;
+    padding: 14px 0;
+
+    h1{
+      float: left;
+      margin: 0;
+      font-size: 20px;
+    }
+    p{
+      float: right;
+      margin: 0;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  }
+}
+header.headerTop{
+  @extend header;
+  position: absolute;
+  z-index: 1;
+}
+footer{
+  margin-top: 40px;
+  padding: 14px 0;
+  color: #FFF;
+}
+
+// sidebar.php
+.sideNav{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .widget{
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+  }
+  .widgettitle{
+    display: none;
+  }
+  li{
+    a{
+      display: block;
+      padding: 10px 5px;
+      color: #FFF;
+      font-size: 14px;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+        color: #666;
+        background-color: #DDD;
+      }
+    }
+  }
+}
+
+.container{
+  width: 980px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
